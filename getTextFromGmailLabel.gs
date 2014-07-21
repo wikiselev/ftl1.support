@@ -27,13 +27,14 @@ function getInfoFromEmails(labelName) {
   var label = GmailApp.getUserLabelByName("pravdina");
   // get count of all threads in the given label
   var threads = label.getThreads();
-  var messages;
+  var messages = GmailApp.getMessagesForThreads(threads);
+  var count = 1;
   
-  for(var i = 0; i < threads.length; i++)
-  {
-    Utilities.sleep(1000)
-    messages = threads[i].getMessages(); 
-    doc.appendParagraph(getTextFromHtml(messages[0].getBody()));
-    messages[0].markRead()
+  for (var i = messages.length - 1 ; i >= 0; i--) {
+    for (var j = 0; j < messages[i].length; j++) {
+      doc.appendParagraph(count);
+      count++;
+      doc.appendParagraph(getTextFromHtml(messages[i][j].getBody()));
+    }
   }
 };
