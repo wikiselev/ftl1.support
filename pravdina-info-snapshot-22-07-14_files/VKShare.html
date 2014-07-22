@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0206)http://static.parastorage.com/services/web/2.974.3/html/external/VKShare.html?id=hxurqt5q&url=http%3A%2F%2Fwww.pravdina.info%2F&style=Button&text=%D0%A0%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            margin:  0;
+        }
+        div, span ,a{
+            white-space: nowrap
+        }
+    </style>
+
+    <script type="text/javascript" src="share.js" charset="windows-1251"></script>
+<script src="share.php"></script><script src="share(1).php"></script><style type="text/css"></style></head>
+
+<body>
+    <script type="text/javascript">
+        (function () {
+            var query = window.location.search.substring(1).split("&"),
+                params = [],
+                tagName,
+                buttonWidth,
+                counterWidth = 43,
+                buttonElm;
+
+            if(!window.VK) {
+                return;
+            }
+
+            for (var i= 0, length = query.length; i < length; i++){
+                var pair = query[i].split("=");
+                params[pair[0]] = pair[1];
+            }
+
+            var type = 'button',
+                url = params['url'],  //URL needs to stay encoded (see hack below)
+                text = decodeURIComponent(params['text']),
+                title = (params['title']) ? decodeURIComponent(params['title']) : undefined,
+                description = (params['description']) ? decodeURIComponent(params['description']) : undefined,
+                image = (params['image']) ? decodeURIComponent(params['image']) : undefined;
+
+            switch(params['style']){
+                case 'Button':
+                    type = 'button';
+                    break;
+                case 'ButtonWithoutCounter':
+                    type = 'button_nocount';
+                    break;
+                case 'Link':
+                    type = 'link' ;
+                    break;
+                case 'LinkWithoutIcon':
+                    type = 'link_noicon';
+                    break;
+                case 'Icon':
+                    type = 'custom' ;
+                    text = '<img src="http://vk.com/images/vk32.png?1" />';
+                    break;
+            }
+
+            /************************************************
+             * PLEASE READ THE FOLLOWING HACK DOCUMENTATION *
+             ************************************************/
+
+            //This button is used just for displaying the correct sharing counter (gets the DECODED url of the site)
+            document.write(VK.Share.button(
+                {
+                    "url": decodeURIComponent(url),
+                    "image": image,
+                    "noparse": true,
+                    "title":title,
+                    "description": description
+                },
+                {
+                    "type": type,
+                    "text": text
+                }
+            ));
+
+            //This button is used just for catching the click and doing the share (getS the ENCODED url of the site)
+            //It is positioned directly above the first button, it's hidden and clickable (using opacity)
+            document.write(VK.Share.button(
+                    {
+                        "url": url,
+                        "image": image,
+                        "noparse": true,
+                        "title":title,
+                        "description": description
+                    },
+                    {
+                        "type": type,
+                        "text": text
+                    }
+            ));
+
+            //Table Tag:
+            //---------
+            // Button(button/round)
+            // ButtonWithoutCounter(button_nocount/round_nocount)
+            // Link(link)
+
+            //A Tag:
+            //-----
+            // LinkWithoutIcon(link_noicon)
+            // Icon(custom)
+
+            //Decide which HTML tag name holds the button
+            switch(type) {
+                case 'button':
+                case 'round':
+                case 'button_nocount':
+                case 'round_nocount':
+                case 'link':
+                    tagName = 'table';
+                    break;
+                case 'link_noicon':
+                case 'custom':
+                    tagName = 'a';
+                    break;
+            }
+
+            //Find the second button, move it on top of the first button and make it invisible
+            var secondButtonElm = document.body.getElementsByTagName(tagName)[1];
+            secondButtonElm.style.position = 'absolute';
+            secondButtonElm.style.top = '0';
+            secondButtonElm.style.left = '0';
+            secondButtonElm.style.opacity = '0';
+            if(isIE() == 8) { secondButtonElm.style.filter = 'alpha(opacity=0)'; }
+
+            //type 'custom' doesn't have text - no need to measure (the rest of the code below)
+            if(type == 'custom') {
+                return;
+            }
+
+            //Measure the width of the first button (the one with the correct counter)
+            buttonElm = document.body.getElementsByTagName(tagName)[0];
+            buttonElm.style['white-space'] = 'pre';  //Make sure that white space is not ignored
+            buttonWidth = buttonElm.offsetWidth;
+
+            //Add width to button with counter (the counter isn't measured)
+            if(type == 'button' || type == 'round') {
+                buttonWidth += counterWidth;
+            }
+
+            //If the button width is exceeds the the width of the body - send post message to the component
+            if (buttonWidth > document.body.offsetWidth) {
+                var msgData = JSON.stringify({
+                    id: decodeURIComponent(params['id']),
+                    width: buttonWidth
+                });
+                window.parent.postMessage(msgData, "*");  //Tell the component to make itself wider
+            }
+
+            //Helper function
+            function isIE () {
+                var myNav = navigator.userAgent.toLowerCase();
+                return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+            }
+        }());
+    </script><table cellspacing="0" cellpadding="0" id="vkshare0" onmouseover="VK.Share.change(1, 0);" onmouseout="VK.Share.change(0, 0);" onmousedown="VK.Share.change(2, 0);" onmouseup="VK.Share.change(1, 0);" style="position: relative; width: auto; cursor: pointer; border: 0px; white-space: pre;"><tbody><tr style="line-height: normal;"><td style="vertical-align: middle;"><a href="http://vk.com/share.php?url=http%3A%2F%2Fwww.pravdina.info%2F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(0, this);" style="border: none;background: #5F83AA;-webkit-border-radius: 2px 0px 0px 2px;-moz-border-radius: 2px 0px 0px 2px;border-radius: 2px 0px 0px 2px;display:block;text-decoration: none;padding: 3px 3px 3px 6px;color: #FFFFFF;font-family: tahoma, arial;height: 15px;line-height:15px;font-size: 10px;text-shadow: none;">Рассказать<div class="float:right"></div></a></td><td style="vertical-align: middle;"><a href="http://vk.com/share.php?url=http%3A%2F%2Fwww.pravdina.info%2F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(0, this);" style="border: none;background: #5F83AA;-webkit-border-radius: 0px 2px 2px 0px;-moz-border-radius: 0px 2px 2px 0px;border-radius: 0px 2px 2px 0px;display:block; padding: 3px;"><div style="background: url(&#39;//vk.com/images/icons/share_logo.png&#39;) 0px 0px no-repeat; background-size: 16px 31px; width: 15px;height: 15px;"></div></a></td><td style="vertical-align: middle;"><a href="http://vk.com/share.php?url=http%3A%2F%2Fwww.pravdina.info%2F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(0, this);" style="text-decoration: none; font-weight: bold; font-family: tahoma, arial; display: block;"><div style="background: url(&#39;//vk.com/images/icons/share_logo.png&#39;) 0px -24px no-repeat; background-size: 16px 31px; width: 4px; height: 7px;position: absolute; margin: 7px 0px 0px 4px;z-index:100;"></div><div id="vkshare_cnt0" style="border: 1px solid #bbbfc4;background: #FFFFFF;height: 15px;line-height: 15px;5px; padding: 2px 4px;min-width: 12px;margin-left: 7px;border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius:2px;text-align: center; color: #666c73;font-size: 10px;z-index:99;">126</div></a></td></tr></tbody></table><table cellspacing="0" cellpadding="0" id="vkshare1" onmouseover="VK.Share.change(1, 1);" onmouseout="VK.Share.change(0, 1);" onmousedown="VK.Share.change(2, 1);" onmouseup="VK.Share.change(1, 1);" style="position: absolute; width: auto; cursor: pointer; border: 0px; top: 0px; left: 0px; opacity: 0;"><tbody><tr style="line-height: normal;"><td style="vertical-align: middle;"><a href="http://vk.com/share.php?url=http%253A%252F%252Fwww.pravdina.info%252F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(1, this);" style="border: none;background: #5F83AA;-webkit-border-radius: 2px 0px 0px 2px;-moz-border-radius: 2px 0px 0px 2px;border-radius: 2px 0px 0px 2px;display:block;text-decoration: none;padding: 3px 3px 3px 6px;color: #FFFFFF;font-family: tahoma, arial;height: 15px;line-height:15px;font-size: 10px;text-shadow: none;">Рассказать<div class="float:right"></div></a></td><td style="vertical-align: middle;"><a href="http://vk.com/share.php?url=http%253A%252F%252Fwww.pravdina.info%252F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(1, this);" style="border: none;background: #5F83AA;-webkit-border-radius: 0px 2px 2px 0px;-moz-border-radius: 0px 2px 2px 0px;border-radius: 0px 2px 2px 0px;display:block; padding: 3px;"><div style="background: url(&#39;//vk.com/images/icons/share_logo.png&#39;) 0px 0px no-repeat; background-size: 16px 31px; width: 15px;height: 15px;"></div></a></td><td style="vertical-align: middle;"><a href="http://vk.com/share.php?url=http%253A%252F%252Fwww.pravdina.info%252F" onmouseup="this._btn=event.button;this.blur();" onclick="return VK.Share.click(1, this);" style="text-decoration: none; font-weight: bold; font-family: tahoma, arial; display: none;"><div style="background: url(&#39;//vk.com/images/icons/share_logo.png&#39;) 0px -24px no-repeat; background-size: 16px 31px; width: 4px; height: 7px;position: absolute; margin: 7px 0px 0px 4px;z-index:100;"></div><div id="vkshare_cnt1" style="border: 1px solid #bbbfc4;background: #FFFFFF;height: 15px;line-height: 15px;5px; padding: 2px 4px;min-width: 12px;margin-left: 7px;border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius:2px;text-align: center; color: #666c73;font-size: 10px;z-index:99;">0</div></a></td></tr></tbody></table>
+
+
+
+
+
+
+</body></html>
