@@ -23,17 +23,17 @@ function getTextFromNode(x) {
 function getInfoFromEmails(labelName) {
   deleteDocByName("pravdina-info")
   var doc = DocumentApp.create("pravdina-info");
-  // get the label for given name
-  var label = GmailApp.getUserLabelByName("pravdina");
-  // get count of all threads in the given label
-  var threads = label.getThreads();
+  // get count of last 200 threads in the given label
+  var threads = GmailApp.getUserLabelByName("pravdina").getThreads(0, 200);
   var messages = GmailApp.getMessagesForThreads(threads);
-  var count = 1;
+//  var count = 1;
   
+//  Logger.log(messages.length);
+//  output messages in the reverse order
   for (var i = messages.length - 1 ; i >= 0; i--) {
     for (var j = 0; j < messages[i].length; j++) {
-      doc.appendParagraph(count);
-      count++;
+//      doc.appendParagraph(count);
+//      count++;
       doc.appendParagraph(getTextFromHtml(messages[i][j].getBody()));
     }
   }
