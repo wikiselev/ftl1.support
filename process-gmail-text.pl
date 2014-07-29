@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 
-open(F, "pravdina-info-all.txt");
+open(F, "txt/pravdina-info-all.txt");
 my @lines = <F>;
 close F;
 
@@ -19,6 +19,6 @@ foreach ( @lines ) {
 	$_ =~ s/Sent on:(.*)Thank you!//;
 }
 
-open (F, '>pravdina-info-processed.txt');
+open (F, '>txt/pravdina-info-processed.txt');
 print F join("\n", @lines);
 close F;

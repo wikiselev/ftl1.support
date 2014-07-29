@@ -7,7 +7,7 @@ sub uniq {
     grep !$seen{$_}++, @_;
 }
 
-open(F, "pravdina-info-all.txt");
+open(F, "txt/pravdina-info-all.txt");
 my @lines = <F>;
 close F;
 
@@ -22,7 +22,7 @@ chomp @lines;
 
 my @filtered = uniq(@lines);
 
-open (F, '>pravdina-info-emails.txt');
+open (F, '>txt/pravdina-info-emails.txt');
 print F join("\n", @filtered);
 # print F join("; ", @filtered);
 close F;
