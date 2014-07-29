@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 
-open(F, "pravdina-info.txt");
+open(F, "pravdina-info-all.txt");
 my @lines = <F>;
 close F;
 
