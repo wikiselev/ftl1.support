@@ -1,4 +1,5 @@
 cp CNAME dist/
+cp -r app/styles app/pravdina.info/
 git add --all
 git commit -m "$1"
 git push origin master
