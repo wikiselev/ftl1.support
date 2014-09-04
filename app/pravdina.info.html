@@ -15,236 +15,287 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/carousel.css">
+    <link rel="stylesheet" href="styles/timeline.css">
     <!-- endbuild -->
   </head>
-  <body role="document">
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <body>
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">FTL1.support</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href=".">Главная</a></li>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#projects">Проекты ФТЛ</a></li>
-            <li><a href="#ftl.info">ФТЛ-инфо</a></li>
-            <li><a href="#contact">Контакты</a></li>
-            <li class="active"><a href="pravdina.info.html">pravdina.info</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
 
-    <div class="container theme-showcase" role="main">
-
-      <div class="container">
-          <div class="page-header text-center">
-              <h1 id="timeline">Хронология событий</h1>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href=".">Главная</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="dropdown active">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Проекты<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Городские проверки в ФТЛ №1</a></li>
+                    <li><a href="#">Сбор средств для Козыревой Н.А.</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">В архиве</li>
+                      <li><a href="pravdina.info.html">pravdina.info</a></li>
+                  </ul>
+                </li>
+                <li><a href="#about">О нас</a></li>
+                <li>      <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">
+                    <i class = "glyphicon glyphicon-envelope"></i>  Подписаться
+                    </button>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
           </div>
-          <ul class="timeline">
-              <li>
-                <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="23 июля 2014 года" id=""></i></a></div>
-                <div class="timeline-panel">
-                  <div class="timeline-body">
-                    <!-- 4:3 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-4by3">
-                      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/P1285qDTo0k?rel=0"></iframe>
-                    </div>
-                    
-                  </div>
-                </div>
-              </li>
-              
-              <li  class="timeline-inverted">
-                <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="23 июля 2014 года" id=""></i></a></div>
-                <div class="timeline-panel">
-                  <div class="timeline-body">
-                    <p><b>Поддержка Саратовских СМИ</b>
-                    <br>
-                    Саратовские журналисты выразили свою поддержку нашим усилиям и личными словами, и своими делами. О ситуации с увольнением Л.В. Правдиной сообщают практически все ведущие СМИ города: интернет-порталы, газеты, телевидение. Особую благодарность за массовую информационную поддержку мы хотим выразить информационному агентству <a href = "http://sovetov.su">"Страна Советов"</a>, информационному агентству <a href = "http://fn-volga.ru/">"FreeNewsVolga"</a>, информационному агентству <a href = "http://nversia.ru/">"Версия-Саратов"</a>, газете <a href = "http://www.kp.ru/">"Комсомольская Правда в Саратове"</a>, информационным порталам <a href = "http://www.vzsar.ru/">"Взгляд-инфо"</a>, <a href = "http://www.sarbc.ru/">СаратовБизнесКонсалтинг</a>, <a href = "http://www.saratovnews.ru/">Saratovnews</a>, <a href = "http://www.4vsar.ru/">"Четвертая власть"</a>. Спасибо, друзья! Ваша помощь очень важна и ценна для всех нас!</p>
-                   
-                  </div>
-                  
-                  <div class="timeline-footer">
-                    <a class="pull-left" href = "http://sar-rodgor.ru/news/sar_gorod_oblast/22866/">«Дело» Правдиной дошло до президента</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.4vsar.ru/news/50824.html">Администрация президента поручила разобраться с увольнением директора лицея</a>
-                    <br>
-                    <a class="pull-left" href = "http://sar-rodgor.ru/news/sar_gorod_oblast/22858/">В защиту уволенного директора ФТЛ собрали более 700 подписей</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.kp.ru/online/news/1798986/">В сквере на Рахова родители учеников саратовского ФТЛ подписали письма Президенту и Губернатору</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.nversia.ru/news/view/id/55606">Письмо президенту в защиту уволенного директора ФТЛ за час подписали 250 человек</a>
-                    <br>
-                    <a class="pull-left" href = "http://fn-volga.ru/news/view/id/21318">Обращения родителей учеников ФТЛ администрация президента перенаправила в областное правительство</a>
-                    <br>
-                    <a class="pull-left" href = "http://sovetov.su/news/776_administraciya_prezidenta_poruchila_saratovskomu_pravitelstvu_razobratsya_v_uvolnenii_direktora_ftl.html">Администрация президента поручила саратовскому правительству разобраться в увольнении директора ФТЛ</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.kp.ru/online/news/1798983/">Эксперты об увольнении директора саратовского ФТЛ: Число лицеистов, сдавших ЕГЭ по физике на «отлично» в 15 раз больше чем в других школах города</a>
-                    <br>
-                    <a class="pull-left" href = "http://sar-rodgor.ru/news/sar_gorod_oblast/22858/">В защиту уволенного директора ФТЛ собрали более 700 подписей</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.kp.ru/daily/26259/3138182/">Одиннадцатиклассница саратовского ФТЛ: «Директор сама готовила нас к ЕГЭ по физике»</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.4vsar.ru/news/50802.html">В защиту уволенного директора лицея собрано почти 600 подписей</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.kp.ru/online/news/1798986/">В сквере на Рахова родители учеников саратовского ФТЛ подписали письма Президенту и Губернатору</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.kp.ru/online/news/1798981/">Организаторы олимпиад по физике в Саратове выступили в защиту уволенного директора ФТЛ</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.nversia.ru/news/view/id/55606">Письмо президенту в защиту уволенного директора ФТЛ за час подписали 250 человек</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.vzsar.ru/news/2014/07/23/vypyskniki-i-roditeli-ychaschihsya-ftl-gotovyatsya-k-provedeniu-mitingov.html">Выпускники и родители учащихся ФТЛ готовятся к проведению митингов</a>
-                    <br>
-                    <a class="pull-left" href = "http://fn-volga.ru/news/view/id/21276">Выпускник ФТЛ, набравший сто баллов в ЕГЭ по физике, об увольнении Правдиной: «Как учитель она безупречна»</a>
-                    <br>
-                    <a class="pull-left" href = "http://sovetov.su/news/415_otdat_podpis_za_pravdinu_prishlo_bolee_300_chelovek.html">Отдать подпись за Правдину пришло более 300 человек</a>
-                    <br>
-                    <br><br><br><br><br><br><br><br><br><br><br><br>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="23 июля 2014 года" id=""></i></a></div>
-                <div class="timeline-panel">
-                  <div class="timeline-body">
-                    <p><b>Ответ от президента</b>
-                    <br>
-                    Активисты, направившие письма Президенту Российской Федерации В.В. Путину, с просьбой разобраться в ситуации с увольнением Л.В. Правдиной, начали получать ответы из президентской администрации: "Ваше обращение на имя Президента Российской Федерации, направленное 18.07.2014 г., полученное 19.07.2014 г. в форме электронного документа и зарегистрированное 20.07.2014 г. за № ..., рассмотрено и направлено в правительство Саратовской области в целях объективного и всестороннего рассмотрения с просьбой проинформировать Вас о результатах рассмотрения (часть 3 статьи 8 Федерального закона от 2 мая 2006 года № 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации»). Советник департамента письменных обращений граждан и организаций В.Горелов".</p>
-                    
-                  </div>
-                </div>
-              </li>
-              
-              <li  class="timeline-inverted">
-                <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="22 июля 2014 года" id=""></i></a></div>
-                <div class="timeline-panel">
-                  <div class="timeline-body">
-                    <p><b>Еще одно независимое письмо</b>
-                    <br>
-                    Выпускники ФТЛ№1, организующие в Саратове олимпиады по физике, написали прекрасный <a href = "docs/LetterFTL.pdf">текст.</p>
-                    
-                  </div>
-                  
-                  <div class="timeline-footer">
-                    <a class="pull-left" href = "http://sovetov.su/news/135_zashchitniki_eks_direktora_ftl_oprovergli_pretenzii_dubrivnogo.html">Защитники экс-директора ФТЛ опровергли претензии Дубривного</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.vzsar.ru/news/2014/07/22/sbor-podpisei-v-podderjky-eks-direktora-ftl-proidet-pod-prismotrom-policii.html">Сбор подписей в поддержку экс-директора ФТЛ пройдет под присмотром полиции</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.kp.ru/daily/26258/3137821/">Выпускники саратовского ФТЛ: «Людмила Правдина — душа «тринашки»</a>
-                    <br>
-                    <a class="pull-left" href = "http://sovetov.su/news/337_sayt_v_podderzhku_lyudmili_pravdinoy_sobral_584_podpisi.html">На сайте в поддержку Людмилы Правдиной уже собрано 584 подписи</a>
-                    <br>
-                    <a class="pull-left" href = "http://sarinform.com/lenta/archives/new/2014/7/22/33297">В поддержку уволенного директора ФТЛ №1 собрано более 500 подписей</a>
-                    <br>
-                    <br>
-                  </div>
-                </div>
-              </li>
+        </nav>
 
-              <li>
-                <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="21 июля 2014 года" id=""></i></a></div>
-                <div class="timeline-panel">
-                  <div class="timeline-body">
-                    <p><b>Дорогие друзья!</b>
-                    <br>
-                    Сегодня мы встречались с Людмилой Вениаминовной Правдиной и по ее просьбе передаем вам всем ее искренние слова огромной благодарности за вашу поддержку, ваше сочувствие и ваше участие!
-                    <br>
-                    Ей невероятно приятно, что такое огромное количество людей нашло время и силы выразить свое мнение по поводу сложившейся ситуации - поверьте, это оказалось очень нужно и важно!
-                    <br>
-                    Людмила Вениаминовна готова в ближайшее время выступить публично, чтобы рассказать вам о реальном состоянии дел. Мы же пока продолжаем сбор подписей всех неравнодушных выпускников, лицеистов и их родителей, просто активных граждан, которым не безразлична судьба Физико-технического лицея №1!</p>
-                  </div>
-                  
-                  <div class="timeline-footer">
-                    <a class="pull-left" href = "http://news.sarbc.ru/main/2014/07/21/156758.html">Открылся сайт в поддержку директора саратовского лицея</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.vzsar.ru/news/2014/07/21/blogger-vladimir-fadeev--gde-skryta-pravda-v-yvolnenii-pravdinoi.html">Блоггер Владимир Фадеев: "Где скрыта правда в увольнении Правдиной?"</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.saratovnews.ru/obschestvo/vypyskniki-ftl-sozdali-sait-v-podderjky-yvolennogo-direktora/">Выпускники ФТЛ создали сайт в поддержку уволенного директора</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.4vsar.ru/news/50701.html">Саратовцы просят Путина и Радаева отменить увольнение директора ФТЛ</a>
-                    <br>
-                    <a class="pull-left" href = "http://fn-volga.ru/news/view/id/21189">Увольнение директора ФТЛ. Родители лицеистов написали письмо Владимиру Путину</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.kp.ru/online/news/1797129/">Выпускники саратовского лицея создали сайт для сбора подписей в поддержку уволенного директора</a>
-                    <br>
-                    <a class="pull-left" href = "http://sovetov.su/news/107_putina_poprosili_razobratsya_v_uvolnenii_direktora_ftl_saratova.html">Путина попросили разобраться в увольнении директора ФТЛ Саратова</a>
-                    <br>
-                    <a class="pull-left" href = "http://www.nversia.ru/news/view/id/55502">Выпускники ФТЛ вступились за уволенного директора</a>
-                    <br>
-                    <a class="pull-left" href = "http://sar-rodgor.ru/news/sar_gorod_oblast/22829/">Саратовцы собирают подписи в защиту уволенного директора ФТЛ</a>
-                    <br>
-                    <a class="pull-left" href = "http://saratov.mk.ru/articles/2014/07/21/vypuskniki-ftl-vstupilis-za-uvolennogo-direktora.html">Выпускники ФТЛ вступились за уволенного директора</a>
-                    <br><br><br><br>
-                  </div>
-                </div>
-              </li>
-              
-              <li  class="timeline-inverted">
-                <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="20 июля 2014 года" id=""></i></a></div>
-                <div class="timeline-panel">
-                  <div class="timeline-footer primary">
-                      <a class="pull-left" href = "http://sovetov.su/news/200714_pravdina.html">Ученики ФТЛ требуют расследования увольнения директора</a>
-                      <br>
-                      <a class="pull-left" href = "http://www.vzsar.ru/news/2014/07/21/vypyskniki-ftl-nachali-sbor-podpisei-v-zaschity-ludmily-pravdinoi.html">Выпускники ФТЛ начали сбор подписей в защиту Людмилы Правдиной</a>
-                      <br>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="19 июля 2014 года" id=""></i></a></div>
-                <div class="timeline-panel">
-                  <div class="timeline-body">
-                    <p><h3 class="text-center">Письмо выпускников в поддержку Правдиной Л.В. и ФТЛ №1</h3></p>
-                    <p class="text-justify">17 июля 2014 года в Саратове без объяснения причин была уволена директор Физико-технического лицея №1 Людмила Вениаминовна Правдина. Трудовой договор с ней был расторгнут в одностороннем порядке комитетом образования администрации г. Саратова по 278 статье ТК РФ, то есть без объяснения причин. В официальном комментарии заместителя главы администрации Саратова по социальной сфере В. Дубривного от 18 июля 2014 сообщается, что за время работы Л.В. Правдиной в должности директора ФТЛ в учреждении наблюдалась тенденция к снижению качества образования учащихся, однако не приводится никаких подтверждающих достоверных, убедительных и конкретных фактов. Остальной текст официального комментария чиновника изобилует логическими и фактическими ошибками и абсолютно не вызывает доверия у тех, кто реально знаком с работой ФТЛ под руководством Л.В. Правдиной.
-                    <br><br>
-                    Общественность города Саратова – выпускники школы разных лет, родители нынешних и будущих лицеистов, журналисты и просто активные граждане, которым не безразлична судьба лучшего в области общеобразовательного учреждения – не могут расценить подобные действия городской власти иначе как чиновничий произвол. Мотивы городской администрации понятны большинству из нас – мы уже не первый раз наблюдаем, как на пустом месте лишаются работы опытные школьные директора – блестящие педагоги и методисты, а на их место ничем не обоснованным решением мелкого городского чиновника назначается близкое к городской администрации лицо.
-                    <br><br><b>
-                    Мы хотим поддержать Людмилу Вениаминовну в этой нелегкой для нее ситуации и выразить ей свою благодарность за все, что она делала для нас и для нашего лицея на протяжении многих лет. Хотим поблагодарить ее за наши судьбы, в которых она сыграла одну из главных ролей. Хотим просто поддержать ее как друга и очень близкого человека.</b>
-                    <br><br>
-                    ФТЛ №1, открытый в 1990 году на базе средней физматшколы №13, воспитал не одно поколение призеров всероссийских и международных олимпиад и просто достойных своей страны людей. Это одна из тех немногих школ, которые действительно воспитывают личность, одна из тех самых школ, о которых Президент РФ говорил как о приоритетных в своем последнем Послании Федеральному Собранию. Поручить руководство такой школой некомпетентному человеку со стороны – а именно такая судьба уготована городской администрацией для ФТЛ №1 – это значит свести на нет все заслуги школы в области образования, которые были отмечены в 2011 году благодарностью Президента РФ.
-                    <br><br><b>
-                    Очень хотелось бы, чтобы вопрос увольнения директора ФТЛ №1 г. Саратова Л.В. Правдиной был расследован и административный беспредел городского комитета по образованию был пресечен.</b>
-                    <br><br>
-                  </p>
-                  </div>
-                  
-                  <div class="timeline-footer primary">
-                      <a href="signatures.html" class="pull-right">Подписи</a><br>
-                  </div>
-                </div>
-              </li>
-
-              <li  class="timeline-inverted">
-                <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="17 июля 2014 года" id=""></i></a></div>
-                <div class="timeline-panel">
-                  <div class="timeline-body">
-                    <p>17 июля 2014 года в Саратове без объяснения причин была уволена директор Физико-технического лицея №1 (ФТЛ №1) Людмила Вениаминовна Правдина. Уже 19 июля выпускники лицея создали сайт поддержки Правдиной Л.В. и ФТЛ №1. Архив сайта теперь находится на этой странице. Пожалуйста, читайте вверх по линии!</p>
-                  </div>
-                </div>
-              </li>
-              
-              <li class="clearfix" style="float: none;"></li>
-          </ul>
       </div>
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <div class="page-header text-center">
+            <h1 id="timeline">Хронология событий</h1>
+        </div>
+        <ul class="timeline">
+            <li>
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="23 июля 2014 года" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-body">
+                  <!-- 4:3 aspect ratio -->
+                  <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/P1285qDTo0k?rel=0"></iframe>
+                  </div>
+                  
+                </div>
+              </div>
+            </li>
+            
+            <li  class="timeline-inverted">
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="23 июля 2014 года" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-body">
+                  <p><b>Поддержка Саратовских СМИ</b>
+                  <br>
+                  Саратовские журналисты выразили свою поддержку нашим усилиям и личными словами, и своими делами. О ситуации с увольнением Л.В. Правдиной сообщают практически все ведущие СМИ города: интернет-порталы, газеты, телевидение. Особую благодарность за массовую информационную поддержку мы хотим выразить информационному агентству <a href = "http://sovetov.su">"Страна Советов"</a>, информационному агентству <a href = "http://fn-volga.ru/">"FreeNewsVolga"</a>, информационному агентству <a href = "http://nversia.ru/">"Версия-Саратов"</a>, газете <a href = "http://www.kp.ru/">"Комсомольская Правда в Саратове"</a>, информационным порталам <a href = "http://www.vzsar.ru/">"Взгляд-инфо"</a>, <a href = "http://www.sarbc.ru/">СаратовБизнесКонсалтинг</a>, <a href = "http://www.saratovnews.ru/">Saratovnews</a>, <a href = "http://www.4vsar.ru/">"Четвертая власть"</a>. Спасибо, друзья! Ваша помощь очень важна и ценна для всех нас!</p>
+                 
+                </div>
+                
+                <div class="timeline-footer">
+                  <a class="pull-left" href = "http://sar-rodgor.ru/news/sar_gorod_oblast/22866/">«Дело» Правдиной дошло до президента</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.4vsar.ru/news/50824.html">Администрация президента поручила разобраться с увольнением директора лицея</a>
+                  <br>
+                  <a class="pull-left" href = "http://sar-rodgor.ru/news/sar_gorod_oblast/22858/">В защиту уволенного директора ФТЛ собрали более 700 подписей</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.kp.ru/online/news/1798986/">В сквере на Рахова родители учеников саратовского ФТЛ подписали письма Президенту и Губернатору</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.nversia.ru/news/view/id/55606">Письмо президенту в защиту уволенного директора ФТЛ за час подписали 250 человек</a>
+                  <br>
+                  <a class="pull-left" href = "http://fn-volga.ru/news/view/id/21318">Обращения родителей учеников ФТЛ администрация президента перенаправила в областное правительство</a>
+                  <br>
+                  <a class="pull-left" href = "http://sovetov.su/news/776_administraciya_prezidenta_poruchila_saratovskomu_pravitelstvu_razobratsya_v_uvolnenii_direktora_ftl.html">Администрация президента поручила саратовскому правительству разобраться в увольнении директора ФТЛ</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.kp.ru/online/news/1798983/">Эксперты об увольнении директора саратовского ФТЛ: Число лицеистов, сдавших ЕГЭ по физике на «отлично» в 15 раз больше чем в других школах города</a>
+                  <br>
+                  <a class="pull-left" href = "http://sar-rodgor.ru/news/sar_gorod_oblast/22858/">В защиту уволенного директора ФТЛ собрали более 700 подписей</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.kp.ru/daily/26259/3138182/">Одиннадцатиклассница саратовского ФТЛ: «Директор сама готовила нас к ЕГЭ по физике»</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.4vsar.ru/news/50802.html">В защиту уволенного директора лицея собрано почти 600 подписей</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.kp.ru/online/news/1798986/">В сквере на Рахова родители учеников саратовского ФТЛ подписали письма Президенту и Губернатору</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.kp.ru/online/news/1798981/">Организаторы олимпиад по физике в Саратове выступили в защиту уволенного директора ФТЛ</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.nversia.ru/news/view/id/55606">Письмо президенту в защиту уволенного директора ФТЛ за час подписали 250 человек</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.vzsar.ru/news/2014/07/23/vypyskniki-i-roditeli-ychaschihsya-ftl-gotovyatsya-k-provedeniu-mitingov.html">Выпускники и родители учащихся ФТЛ готовятся к проведению митингов</a>
+                  <br>
+                  <a class="pull-left" href = "http://fn-volga.ru/news/view/id/21276">Выпускник ФТЛ, набравший сто баллов в ЕГЭ по физике, об увольнении Правдиной: «Как учитель она безупречна»</a>
+                  <br>
+                  <a class="pull-left" href = "http://sovetov.su/news/415_otdat_podpis_za_pravdinu_prishlo_bolee_300_chelovek.html">Отдать подпись за Правдину пришло более 300 человек</a>
+                  <br>
+                  <br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="23 июля 2014 года" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-body">
+                  <p><b>Ответ от президента</b>
+                  <br>
+                  Активисты, направившие письма Президенту Российской Федерации В.В. Путину, с просьбой разобраться в ситуации с увольнением Л.В. Правдиной, начали получать ответы из президентской администрации: "Ваше обращение на имя Президента Российской Федерации, направленное 18.07.2014 г., полученное 19.07.2014 г. в форме электронного документа и зарегистрированное 20.07.2014 г. за № ..., рассмотрено и направлено в правительство Саратовской области в целях объективного и всестороннего рассмотрения с просьбой проинформировать Вас о результатах рассмотрения (часть 3 статьи 8 Федерального закона от 2 мая 2006 года № 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации»). Советник департамента письменных обращений граждан и организаций В.Горелов".</p>
+                  
+                </div>
+              </div>
+            </li>
+            
+            <li  class="timeline-inverted">
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="22 июля 2014 года" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-body">
+                  <p><b>Еще одно независимое письмо</b>
+                  <br>
+                  Выпускники ФТЛ№1, организующие в Саратове олимпиады по физике, написали прекрасный <a href = "docs/LetterFTL.pdf">текст.</p>
+                  
+                </div>
+                
+                <div class="timeline-footer">
+                  <a class="pull-left" href = "http://sovetov.su/news/135_zashchitniki_eks_direktora_ftl_oprovergli_pretenzii_dubrivnogo.html">Защитники экс-директора ФТЛ опровергли претензии Дубривного</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.vzsar.ru/news/2014/07/22/sbor-podpisei-v-podderjky-eks-direktora-ftl-proidet-pod-prismotrom-policii.html">Сбор подписей в поддержку экс-директора ФТЛ пройдет под присмотром полиции</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.kp.ru/daily/26258/3137821/">Выпускники саратовского ФТЛ: «Людмила Правдина — душа «тринашки»</a>
+                  <br>
+                  <a class="pull-left" href = "http://sovetov.su/news/337_sayt_v_podderzhku_lyudmili_pravdinoy_sobral_584_podpisi.html">На сайте в поддержку Людмилы Правдиной уже собрано 584 подписи</a>
+                  <br>
+                  <a class="pull-left" href = "http://sarinform.com/lenta/archives/new/2014/7/22/33297">В поддержку уволенного директора ФТЛ №1 собрано более 500 подписей</a>
+                  <br>
+                  <br>
+                </div>
+              </div>
+            </li>
 
-      <div class="footer">
-        <p>Vladimir Kiselev, 2014</p>
-      </div>
+            <li>
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="21 июля 2014 года" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-body">
+                  <p><b>Дорогие друзья!</b>
+                  <br>
+                  Сегодня мы встречались с Людмилой Вениаминовной Правдиной и по ее просьбе передаем вам всем ее искренние слова огромной благодарности за вашу поддержку, ваше сочувствие и ваше участие!
+                  <br>
+                  Ей невероятно приятно, что такое огромное количество людей нашло время и силы выразить свое мнение по поводу сложившейся ситуации - поверьте, это оказалось очень нужно и важно!
+                  <br>
+                  Людмила Вениаминовна готова в ближайшее время выступить публично, чтобы рассказать вам о реальном состоянии дел. Мы же пока продолжаем сбор подписей всех неравнодушных выпускников, лицеистов и их родителей, просто активных граждан, которым не безразлична судьба Физико-технического лицея №1!</p>
+                </div>
+                
+                <div class="timeline-footer">
+                  <a class="pull-left" href = "http://news.sarbc.ru/main/2014/07/21/156758.html">Открылся сайт в поддержку директора саратовского лицея</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.vzsar.ru/news/2014/07/21/blogger-vladimir-fadeev--gde-skryta-pravda-v-yvolnenii-pravdinoi.html">Блоггер Владимир Фадеев: "Где скрыта правда в увольнении Правдиной?"</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.saratovnews.ru/obschestvo/vypyskniki-ftl-sozdali-sait-v-podderjky-yvolennogo-direktora/">Выпускники ФТЛ создали сайт в поддержку уволенного директора</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.4vsar.ru/news/50701.html">Саратовцы просят Путина и Радаева отменить увольнение директора ФТЛ</a>
+                  <br>
+                  <a class="pull-left" href = "http://fn-volga.ru/news/view/id/21189">Увольнение директора ФТЛ. Родители лицеистов написали письмо Владимиру Путину</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.kp.ru/online/news/1797129/">Выпускники саратовского лицея создали сайт для сбора подписей в поддержку уволенного директора</a>
+                  <br>
+                  <a class="pull-left" href = "http://sovetov.su/news/107_putina_poprosili_razobratsya_v_uvolnenii_direktora_ftl_saratova.html">Путина попросили разобраться в увольнении директора ФТЛ Саратова</a>
+                  <br>
+                  <a class="pull-left" href = "http://www.nversia.ru/news/view/id/55502">Выпускники ФТЛ вступились за уволенного директора</a>
+                  <br>
+                  <a class="pull-left" href = "http://sar-rodgor.ru/news/sar_gorod_oblast/22829/">Саратовцы собирают подписи в защиту уволенного директора ФТЛ</a>
+                  <br>
+                  <a class="pull-left" href = "http://saratov.mk.ru/articles/2014/07/21/vypuskniki-ftl-vstupilis-za-uvolennogo-direktora.html">Выпускники ФТЛ вступились за уволенного директора</a>
+                  <br><br><br><br>
+                </div>
+              </div>
+            </li>
+            
+            <li  class="timeline-inverted">
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="20 июля 2014 года" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-footer primary">
+                    <a class="pull-left" href = "http://sovetov.su/news/200714_pravdina.html">Ученики ФТЛ требуют расследования увольнения директора</a>
+                    <br>
+                    <a class="pull-left" href = "http://www.vzsar.ru/news/2014/07/21/vypyskniki-ftl-nachali-sbor-podpisei-v-zaschity-ludmily-pravdinoi.html">Выпускники ФТЛ начали сбор подписей в защиту Людмилы Правдиной</a>
+                    <br>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="19 июля 2014 года" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-body">
+                  <p><h3 class="text-center">Письмо выпускников в поддержку Правдиной Л.В. и ФТЛ №1</h3></p>
+                  <p class="text-justify">17 июля 2014 года в Саратове без объяснения причин была уволена директор Физико-технического лицея №1 Людмила Вениаминовна Правдина. Трудовой договор с ней был расторгнут в одностороннем порядке комитетом образования администрации г. Саратова по 278 статье ТК РФ, то есть без объяснения причин. В официальном комментарии заместителя главы администрации Саратова по социальной сфере В. Дубривного от 18 июля 2014 сообщается, что за время работы Л.В. Правдиной в должности директора ФТЛ в учреждении наблюдалась тенденция к снижению качества образования учащихся, однако не приводится никаких подтверждающих достоверных, убедительных и конкретных фактов. Остальной текст официального комментария чиновника изобилует логическими и фактическими ошибками и абсолютно не вызывает доверия у тех, кто реально знаком с работой ФТЛ под руководством Л.В. Правдиной.
+                  <br><br>
+                  Общественность города Саратова – выпускники школы разных лет, родители нынешних и будущих лицеистов, журналисты и просто активные граждане, которым не безразлична судьба лучшего в области общеобразовательного учреждения – не могут расценить подобные действия городской власти иначе как чиновничий произвол. Мотивы городской администрации понятны большинству из нас – мы уже не первый раз наблюдаем, как на пустом месте лишаются работы опытные школьные директора – блестящие педагоги и методисты, а на их место ничем не обоснованным решением мелкого городского чиновника назначается близкое к городской администрации лицо.
+                  <br><br><b>
+                  Мы хотим поддержать Людмилу Вениаминовну в этой нелегкой для нее ситуации и выразить ей свою благодарность за все, что она делала для нас и для нашего лицея на протяжении многих лет. Хотим поблагодарить ее за наши судьбы, в которых она сыграла одну из главных ролей. Хотим просто поддержать ее как друга и очень близкого человека.</b>
+                  <br><br>
+                  ФТЛ №1, открытый в 1990 году на базе средней физматшколы №13, воспитал не одно поколение призеров всероссийских и международных олимпиад и просто достойных своей страны людей. Это одна из тех немногих школ, которые действительно воспитывают личность, одна из тех самых школ, о которых Президент РФ говорил как о приоритетных в своем последнем Послании Федеральному Собранию. Поручить руководство такой школой некомпетентному человеку со стороны – а именно такая судьба уготована городской администрацией для ФТЛ №1 – это значит свести на нет все заслуги школы в области образования, которые были отмечены в 2011 году благодарностью Президента РФ.
+                  <br><br><b>
+                  Очень хотелось бы, чтобы вопрос увольнения директора ФТЛ №1 г. Саратова Л.В. Правдиной был расследован и административный беспредел городского комитета по образованию был пресечен.</b>
+                  <br><br>
+                </p>
+                </div>
+                
+                <div class="timeline-footer primary">
+                    <a href="signatures.html" class="pull-right">Подписи</a><br>
+                </div>
+              </div>
+            </li>
+
+            <li  class="timeline-inverted">
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="17 июля 2014 года" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-body">
+                  <p>17 июля 2014 года в Саратове без объяснения причин была уволена директор Физико-технического лицея №1 (ФТЛ №1) Людмила Вениаминовна Правдина. Уже 19 июля выпускники лицея создали сайт поддержки Правдиной Л.В. и ФТЛ №1. Архив сайта теперь находится на этой странице. Пожалуйста, читайте вверх по линии!</p>
+                </div>
+              </div>
+            </li>
+            
+            <li class="clearfix" style="float: none;"></li>
+        </ul>
+        <!-- FOOTER -->
+        <footer>
+          <p><i class = "glyphicon glyphicon-copyright-mark"></i> Группа поддержки ФТЛ №1  &bull;  2014</p>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Подпишитесь на нашу рассылку!</h4>
+           
+                  <p>Просто напечатайте свой емейл и нажмите кнопку "Подписаться"</p>
+                </div>
+                <div class="modal-body">
+           
+             <!-- Begin MailChimp Signup Form -->
+          <form class="form-horizontal" role="form" method="post" action="//pravdina.us8.list-manage.com/subscribe/post?u=840b8b1b9f728693ad2c96253&amp;id=e775e00da6">
+            <div class="form-group">
+              <label for="mce-EMAIL" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL"/>
+              </div>
+            </div>
+            <br>
+           <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+           </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_840b8b1b9f728693ad2c96253_e775e00da6" value=""/></div>
+              <div class="form-group remove-bottom">
+              <div class="col-sm-offset-2 col-sm-10">
+              <input type="submit" value="Подписаться" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"/>
+              </div>
+          </form>
+          <!--End mc_embed_signup-->
+                </div>
+                <div class="modal-footer remove-top">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
 
     </div>
 

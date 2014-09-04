@@ -15,40 +15,54 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/carousel.css">
+    <link rel="stylesheet" href="styles/timeline.css">
     <!-- endbuild -->
   </head>
-  <body role="document">
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <body>
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">FTL1.support</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href=".">Главная</a></li>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#projects">Проекты ФТЛ</a></li>
-            <li><a href="#ftl.info">ФТЛ-инфо</a></li>
-            <li><a href="#contact">Контакты</a></li>
-            <li class="active"><a href="pravdina.info.html">pravdina.info</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
 
-    <div class="container theme-showcase" role="main">
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href=".">Главная</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="dropdown active">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Проекты<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Городские проверки в ФТЛ №1</a></li>
+                    <li><a href="#">Сбор средств для Козыревой Н.А.</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">В архиве</li>
+                      <li><a href="pravdina.info.html">pravdina.info</a></li>
+                  </ul>
+                </li>
+                <li><a href="#about">О нас</a></li>
+                <li>      <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">
+                    <i class = "glyphicon glyphicon-envelope"></i>  Подписаться
+                    </button>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+      </div>
+    </div>
+    <br><br><br><br>
+    <div class="container">
       <h1><p class="text-center">Подписи</p></h1>
       <br>
       <div class="well">
@@ -4428,9 +4442,50 @@
       </i>
       </p>
       </div>
-      <div class="footer">
-        <p>Vladimir Kiselev, 2014</p>
-      </div>
+      <!-- FOOTER -->
+      <footer>
+        <p><i class = "glyphicon glyphicon-copyright-mark"></i> Группа поддержки ФТЛ №1  &bull;  2014</p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Подпишитесь на нашу рассылку!</h4>
+         
+                <p>Просто напечатайте свой емейл и нажмите кнопку "Подписаться"</p>
+              </div>
+              <div class="modal-body">
+         
+           <!-- Begin MailChimp Signup Form -->
+        <form class="form-horizontal" role="form" method="post" action="//pravdina.us8.list-manage.com/subscribe/post?u=840b8b1b9f728693ad2c96253&amp;id=e775e00da6">
+          <div class="form-group">
+            <label for="mce-EMAIL" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL"/>
+            </div>
+          </div>
+          <br>
+         <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+         </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_840b8b1b9f728693ad2c96253_e775e00da6" value=""/></div>
+            <div class="form-group remove-bottom">
+            <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="Подписаться" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"/>
+            </div>
+        </form>
+        <!--End mc_embed_signup-->
+              </div>
+              <div class="modal-footer remove-top">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
     </div>
 
