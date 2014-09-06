@@ -59,7 +59,8 @@ module.exports = function (grunt) {
         files: [
           '<%= config.app %>/*.html',
           '.tmp/styles/{,*/}*.css',
-          '<%= config.app %>/images/{,*/}*'
+          '<%= config.app %>/images/{,*/}*',
+          '<%= config.app %>/docs/{,*/}*'
         ]
       }
     },
@@ -177,6 +178,7 @@ module.exports = function (grunt) {
             '<%= config.dist %>/scripts/{,*/}*.js',
             '<%= config.dist %>/styles/{,*/}*.css',
             '<%= config.dist %>/images/{,*/}*.*',
+            '<%= config.app %>/docs/{,*/}*',
             '<%= config.dist %>/styles/fonts/{,*/}*.*',
             '<%= config.dist %>/*.{ico,png}'
           ]
@@ -285,6 +287,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
+            'docs/{,*/}*.*',
             '*.html',
             'styles/fonts/{,*/}*.*'
           ]
