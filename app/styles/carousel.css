@@ -53,7 +53,7 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 30px 0; /* Space out the Bootstrap <hr> more */
+  margin: 15px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -77,7 +77,7 @@ body {
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
