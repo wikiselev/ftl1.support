@@ -1,1 +1,0 @@
-$(document).ready(function(){var a=$("[rel=tooltip]"),b=$(window).width();for(i=0;i<a.length;i++)the_post=$(a[i]),the_post.hasClass("invert")&&b>=767?(the_post.tooltip({placement:"left"}),the_post.css("cursor","pointer")):(the_post.tooltip({placement:"rigth"}),the_post.css("cursor","pointer"))});
