@@ -9,7 +9,7 @@ $(document).ready(function(){
 			the_post.tooltip({ placement: 'left'});
 			the_post.css("cursor","pointer");
 		}else{
-			the_post.tooltip({ placement: 'rigth'});
+			the_post.tooltip({ placement: 'right'});
 			the_post.css("cursor","pointer");
 		}
 	}
