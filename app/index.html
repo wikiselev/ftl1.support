@@ -17,6 +17,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/carousel.css">
     <link rel="stylesheet" href="styles/timeline.css">
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
@@ -114,12 +115,39 @@
         </div>
       </div>
       <div class="row featurette">
+
         <div class="col-md-3">
           <img class="featurette-image img-default" src="images/logo.png">
         </div>
-        <div class="col-md-9">
+
+        <div class="col-md-5">
           <h2 class="featurette-heading">Добро пожаловать!</h2>
           <p class="lead"><br>Вы находитесь на сайте, созданном для общественной поддержки <a href = "http://ftl1.ru">Физико-технического лицея №1</a> города Саратова, открытого в 1990 году на базе средней физико-математической школы №13 (Тринашки).</p>
+        </div>
+
+        <div class="col-md-4">
+          <br>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <i class="fa fa-list fa-lg"></i><b>&nbsp;&nbsp;Наши новости</b>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-12">
+                  <ul id="news">
+                    <li class="news-item">
+                      ФТЛ вошел в ТОП-25 лучших школ России по версии "Учительской газеты" <a href="http://ftl1.ru/news_detailed/items/ftl-voshel-v-top-25-luchshix-shkol-rossii-po-versii-uchitelskoj-gazety.html">Читать далее...</a>
+                      <br><br>
+                    </li>
+  <!--                   <li class="news-item">
+                      Curabitur porttitor ante eget hendrerit adipiscing. Maecenas at magna accumsan, rhoncus neque id, fringilla dolor. <a href="#">Read more...</a>
+                    </li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer"> </div>
+          </div>
         </div>
       </div>
 
@@ -323,8 +351,22 @@
         <script src="bower_components/bootstrap/js/tab.js"></script>
         <!-- endbuild -->
 
+        <script type="text/javascript">
+            $(function () {
+                $("#news").bootstrapNews({
+                    newsPerPage: 2,
+                    autoplay: false,
+                    
+                    onToDo: function () {
+                        //console.log(this);
+                    }
+                });
+            });
+        </script>
+
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/jquery.bootstrap.newsbox.min.js" type="text/javascript"></script>
         <!-- endbuild -->
 
   </body>
